@@ -1,0 +1,4 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pillow in /home/kunet.ae/100053689/.local/lib/python3.9/site-packages (10.2.0)
+Epoch 0 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5362, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2739628961607833  	  0.1304660923009612  	  0.1256341541315698

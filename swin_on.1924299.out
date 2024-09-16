@@ -1,0 +1,62 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pillow in /home/kunet.ae/100053689/.local/lib/python3.9/site-packages (10.2.0)
+Epoch 0 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5208, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2918062355063128  	  0.2919816618569763  	  0.17670926264333453
+tensor(0.5336, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 1 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5341, device='cuda:0', grad_fn=<DivBackward0>)  	  0.275380056686421  	  0.13260953256219454  	  0.12071315989167224
+tensor(0.5333, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 2 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5332, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27544447307395004  	  0.09734332605068544  	  0.11994658461134006
+tensor(0.5346, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 3 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5322, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27576655501159497  	  0.07612009804572634  	  0.11930760671275224
+tensor(0.5320, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 4 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5323, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07616853302507541  	  0.11938518566848728
+tensor(0.5325, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 5 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5312, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5322, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 6 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5312, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5322, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 7 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5307, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5334, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 8 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5317, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27557330584900797  	  0.08922551959890772  	  0.11971407552095154
+tensor(0.5354, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 9 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5305, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615871938943473  	  0.11937313082063869
+tensor(0.5334, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 10 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5302, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5339, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 11 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5305, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5323, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 12 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5302, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27557330584900797  	  0.08814392011317315  	  0.11937847184160219
+tensor(0.5319, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 13 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5301, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5320, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 14 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5298, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5317, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 15 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5298, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5320, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 16 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5299, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5320, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 17 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5294, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5320, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 18 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5295, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5318, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 19 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+tensor(0.5293, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+tensor(0.5318, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728

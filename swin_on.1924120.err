@@ -1,0 +1,33 @@
+    Command utilities loaded:
+ 
+    ssumm:      Summarizes the status of Almesbar's partitions.
+    spend:      Displays the list of pending jobs sorted by priority.
+    sfairshare: Displays the list accounts sorted by fairshare value.
+    sbfill:     Displays backfill window.
+ 
+    Use the option -h or --help after a command for more details.
+    Example: sbfill -h
+    For more information visit
+https://wiki-researchcomputing.ku.ac.ae/display/RC/Command+utilities+on+Almesbar+HPC+cluster 
+/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Traceback (most recent call last):
+  File "/home/kunet.ae/100053689/swin_classifier/Swin_transformer.py", line 156, in <module>
+    test_loss, test_acc, test_prec, test_f1score = validation_func(test_dataloader)
+  File "/home/kunet.ae/100053689/swin_classifier/Swin_transformer.py", line 149, in validation_func
+    epoch_precision = precision_score(actual,predicted)
+  File "/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/sklearn/utils/_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+  File "/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/sklearn/metrics/_classification.py", line 2182, in precision_score
+    p, _, _, _ = precision_recall_fscore_support(
+  File "/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/sklearn/utils/_param_validation.py", line 186, in wrapper
+    return func(*args, **kwargs)
+  File "/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/sklearn/metrics/_classification.py", line 1767, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
+  File "/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/sklearn/metrics/_classification.py", line 1556, in _check_set_wise_labels
+    raise ValueError(
+ValueError: Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].

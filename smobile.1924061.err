@@ -1,0 +1,19 @@
+    Command utilities loaded:
+ 
+    ssumm:      Summarizes the status of Almesbar's partitions.
+    spend:      Displays the list of pending jobs sorted by priority.
+    sfairshare: Displays the list accounts sorted by fairshare value.
+    sbfill:     Displays backfill window.
+ 
+    Use the option -h or --help after a command for more details.
+    Example: sbfill -h
+    For more information visit
+https://wiki-researchcomputing.ku.ac.ae/display/RC/Command+utilities+on+Almesbar+HPC+cluster 
+/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/home/kunet.ae/100053689/.local/lib/python3.9/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+Traceback (most recent call last):
+  File "/home/kunet.ae/100053689/swin_classifier/swin_mobilenet.py", line 171, in <module>
+    print(tr_loss+ '  \t  '+ tr_acc +'  \t  '+ tr_prec+ '  \t  '+tr_f1score)
+TypeError: unsupported operand type(s) for +: 'Tensor' and 'str'
