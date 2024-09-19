@@ -2,13 +2,13 @@
 #SBATCH --nodes=1
 #SBATCH --mem=64G
 #SBATCH --ntasks-per-node=16
-#SBATCH --job-name=swin
+#SBATCH --job-name=swin-mobilenet
 #SBATCH --time=24:00:00
 #SBATCH --gres=gpu:1
 #SBATCH --partition=gpu
 #SBATCH --account=kunf0085
-#SBATCH --output=smobile.%j.out
-#SBATCH --error=smobile.%j.err
+#SBATCH --output=swin_mobile.%j.out
+#SBATCH --error=s_mobile.%j.err
 
 module load miniconda/3
 module load cuda/11.7

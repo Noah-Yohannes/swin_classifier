@@ -7,8 +7,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --partition=gpu
 #SBATCH --account=kunf0085
-#SBATCH --output=swin_on.%j.out
-#SBATCH --error=swin_on.%j.err
+#SBATCH --output=swino.%j.out
+#SBATCH --error=swino.%j.err
 
 module load miniconda/3
 module load cuda/11.7

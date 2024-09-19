@@ -113,8 +113,9 @@ def training_func(t_data_loader):
         # update weights
         output = SwinClassifier.predict(x_batch)
         optimizer.step()
-        #print("Output: ", output)
-        #print("Truth: ", y_batch)
+        print("Output : ", output)
+        print("Loss : ", loss)
+        print("y_batch : ", y_batch)
         actual.append(y_batch.cpu().detach().numpy())
         predicted.append(output.cpu().detach().numpy())
         train_acc = torch.sum(output == y_batch)
@@ -139,6 +140,9 @@ def validation_func(v_data_loader):
             loss = criterion(logit, y_batch)
             output = SwinClassifier.predict(x_batch)
             test_acc = torch.sum(output == y_batch)
+            print("Validation loss: ",loss)
+            print("Validation y_batch : ", y_batch)
+            print("Validation output : ", output)
             epoch_loss += loss
             actual.append(y_batch.cpu().detach().numpy())
             predicted.append(output.cpu().detach().numpy())
@@ -149,9 +153,12 @@ def validation_func(v_data_loader):
     epoch_precision = precision_score(actual,predicted,average="weighted")
     epoch_f1 = f1_score(actual,predicted, average="weighted")
     return epoch_loss, epoch_accuracy, epoch_precision, epoch_f1
-for i in range (epochs):
-    print(f"Epoch {i} : \t Loss \t Accuracy  \t Precision  \t F1-score ")
-    tr_loss, tr_acc, tr_prec, tr_f1score = training_func(train_dataloader)
-    print(str(tr_loss) + '  \t  '+ str(tr_acc) +'  \t  ' + str(tr_prec) + '  \t  ' + str(tr_f1score))
-    test_loss, test_acc, test_prec, test_f1score = validation_func(test_dataloader)
-    print(str(test_loss) + '  \t  '+ str(test_acc) + '  \t  '+ str(test_prec) + '  \t  '+ str(test_f1score))
+with open("epoch_results.txt", 'w') as f:
+    for i in range (epochs):
+         print(f"Epoch {i} : \t Loss \t Accuracy  \t Precision  \t F1-score ")
+         tr_loss, tr_acc, tr_prec, tr_f1score = training_func(train_dataloader)
+         print(str(tr_loss) + '  \t  '+ str(tr_acc) +'  \t  ' + str(tr_prec) + '  \t  ' + str(tr_f1score))
+         f.writelines(str(tr_loss) + '  \t  '+ str(tr_acc) +'  \t  ' + str(tr_prec) + '  \t  ' + str(tr_f1score))
+         test_loss, test_acc, test_prec, test_f1score = validation_func(test_dataloader)
+         print(str(test_loss) + '  \t  '+ str(test_acc) + '  \t  '+ str(test_prec) + '  \t  '+ str(test_f1score))
+         f.writelines(str(test_loss) + '  \t  '+ str(test_acc) + '  \t  '+ str(test_prec) + '  \t  '+ str(test_f1score))

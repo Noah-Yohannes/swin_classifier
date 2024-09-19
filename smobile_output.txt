@@ -1,0 +1,102 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pillow in /home/kunet.ae/100053689/.local/lib/python3.9/site-packages (10.2.0)
+Epoch 0 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [2 1 9 7] values
+tensor(0.5363, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2723524864725586  	  0.12027452940366037  	  0.12446779062633094
+Sample predicted: [3] and actual : [2] values
+tensor(0.5329, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 1 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [4 0 5 4] values
+tensor(0.5357, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2745426436485442  	  0.17675012477580795  	  0.12422547729200001
+Sample predicted: [3] and actual : [2] values
+tensor(0.5363, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 2 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [8 2 2 3] values
+tensor(0.5336, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27615305333676887  	  0.11075706976412633  	  0.12087665010628255
+Sample predicted: [3] and actual : [0] values
+tensor(0.5332, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 3 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [6 3 8 6] values
+tensor(0.5320, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27518680752383406  	  0.1000024307374348  	  0.12194707877122264
+Sample predicted: [3] and actual : [4] values
+tensor(0.5726, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 4 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [7 3 3 6] values
+tensor(0.5318, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27576655501159497  	  0.10813826177783803  	  0.12216101228490389
+Sample predicted: [3] and actual : [1] values
+tensor(0.5327, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 5 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [7 2 6 3] values
+tensor(0.5312, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27570213862406595  	  0.09184265525297305  	  0.11973461335821854
+Sample predicted: [3] and actual : [8] values
+tensor(0.5324, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 6 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [3 3 9 5] values
+tensor(0.5302, device='cuda:0', grad_fn=<DivBackward0>)  	  0.27525122391136303  	  0.10209592330961648  	  0.1216922715325961
+Sample predicted: [3] and actual : [3] values
+tensor(0.5315, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 7 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [7 3 8 3] values
+tensor(0.5308, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07616362589113486  	  0.11937915794023986
+Sample predicted: [3] and actual : [2] values
+tensor(0.5322, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 8 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [1 4 1 4] values
+tensor(0.5310, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [3] values
+tensor(0.5319, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 9 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [2 6 8 3] values
+tensor(0.5303, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2758953877866529  	  0.0761507532554617  	  0.11935731797808848
+Sample predicted: [3] and actual : [8] values
+tensor(0.5322, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 10 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [4 2 3 3] values
+tensor(0.5303, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2760886369492399  	  0.18060896933874027  	  0.11964253376618009
+Sample predicted: [3] and actual : [2] values
+tensor(0.5321, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 11 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [3 3 8 4] values
+tensor(0.5304, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [9] values
+tensor(0.5327, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 12 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [0 5 1 4] values
+tensor(0.5302, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [3] values
+tensor(0.5316, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 13 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [3 7 9 1] values
+tensor(0.5302, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [4] values
+tensor(0.5317, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 14 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [0 7 8 3] values
+tensor(0.5295, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [4] values
+tensor(0.5317, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 15 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [7 4 3 8] values
+tensor(0.5295, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [0] values
+tensor(0.5333, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 16 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [4 2 5 3] values
+tensor(0.5297, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [2] values
+tensor(0.5318, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 17 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [6 3 9 6] values
+tensor(0.5295, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [2] values
+tensor(0.5321, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 18 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [3 3 2 2] values
+tensor(0.5295, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [4] values
+tensor(0.5319, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
+Epoch 19 : 	 Loss 	 Accuracy  	 Precision  	 F1-score 
+Sample predicted: [3 3 3 3] and actual : [7 9 7 4] values
+tensor(0.5293, device='cuda:0', grad_fn=<DivBackward0>)  	  0.2759598041741819  	  0.07615381351985283  	  0.1193671043095916
+Sample predicted: [3] and actual : [7] values
+tensor(0.5318, device='cuda:0')  	  0.2677145065704715  	  0.07167105702827103  	  0.11307128956370728
