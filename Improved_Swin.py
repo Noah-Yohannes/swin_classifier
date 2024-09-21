@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 import torch.optim as optim
 from torch.nn import functional as F
-
+from torcheval.metrics.functional import multiclass_precision, multiclass_accuracy, multiclass_f1_score
 from torchvision.transforms import v2
 
 import numpy as np
@@ -86,13 +86,13 @@ class SwinModel(nn.Module):
 
 num_classes = 10
 SwinClassifier = SwinModel(num_classes = 10,freeze_base=False)
-
+#SwinClassifier = SwinClassifier.to(device)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-SwinClassifier.to(device)
+SwinClassifier = SwinClassifier.to(device)
 
 epochs = 20
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.AdamW(SwinClassifier.parameters(), lr=3e-4, betas=(0.9, 0.999), eps=1e-8)
+optimizer = optim.AdamW(SwinClassifier.parameters(), lr=0.1, betas=(0.9, 0.999), eps=1e-8)
 
 def training_func(t_data_loader):
     SwinClassifier.train()
@@ -105,27 +105,46 @@ def training_func(t_data_loader):
         x_batch, y_batch = batch[0].to(device),batch[1].to(device)
         # set parameter gradients to zero
         optimizer.zero_grad()
+        # added begin
         logits = SwinClassifier(x_batch)
         loss = criterion(logits, y_batch)
-        epoch_loss +=loss
-        # backward-pass
         loss.backward()
-        # update weights
-        output = SwinClassifier.predict(x_batch)
         optimizer.step()
-        print("Output : ", output)
+        epoch_loss += loss #.item()
+        preds = torch.argmax(logits, dim=1)
+        predicted.extend(preds.cpu().numpy())
+        actual.extend(y_batch.cpu().numpy())
+        # added end
+        #logits = SwinClassifier(x_batch)
+        #loss = criterion(logits, y_batch)
+        #epoch_loss +=loss.item()
+        # backward-pass
+        #loss.backward()
+        # update weights
+        #output = SwinClassifier.predict(x_batch)
+        #optimizer.step()
+        print("Output : ", preds)
         print("Loss : ", loss)
         print("y_batch : ", y_batch)
-        actual.append(y_batch.cpu().detach().numpy())
-        predicted.append(output.cpu().detach().numpy())
-        train_acc = torch.sum(output == y_batch)
-    actual = np.concatenate(actual, axis=0)
-    predicted = np.concatenate(predicted, axis=0)
-    epoch_accuracy = accuracy_score(actual,predicted)
-    epoch_loss = epoch_loss / len(train_dataset)
-    epoch_precision = precision_score(actual,predicted, average='weighted')
-    epoch_f1 = f1_score(actual,predicted, average='weighted')
-    return epoch_loss, epoch_accuracy, epoch_precision, epoch_f1
+        #actual.append(y_batch.cpu().detach().numpy())
+        #predicted.append(output.cpu().detach().numpy())
+        #train_acc = torch.sum(output == y_batch)
+
+    epoch_loss /= len(t_data_loader)
+    predicted = torch.tensor(predicted)
+    actual = torch.tensor(actual)
+    epoch_accuracy = multiclass_accuracy(predicted, actual, num_classes=10)
+    epoch_precision = multiclass_precision(predicted, actual, num_classes=10)
+    epoch_f1 = multiclass_f1_score(predicted, actual, num_classes=10)
+    return epoch_loss, epoch_accuracy.item(), epoch_precision.item(), epoch_f1.item()
+
+    #actual = np.concatenate(actual, axis=0)
+    #predicted = np.concatenate(predicted, axis=0)
+    #epoch_accuracy = multiclass_accuracy(actual, predicted, num_classes=10) #accuracy_score(actual,predicted)
+    #epoch_loss = epoch_loss / len(t_data_loader)
+    #epoch_precision = multiclass_precision(actual, predicted, num_classes=10) #precision_score(actual,predicted, average='weighted')
+    #epoch_f1 = multiclass_f1_score(actual, predicted, num_classes=10) #f1_score(actual,predicted, average='weighted')
+    #return epoch_loss, epoch_accuracy, epoch_precision, epoch_f1
 
 def validation_func(v_data_loader):
     SwinClassifier.eval()
@@ -137,23 +156,33 @@ def validation_func(v_data_loader):
         for batch in v_data_loader:
             x_batch, y_batch = batch[0].to(device),batch[1].to(device)
             logit = SwinClassifier(x_batch)
-            loss = criterion(logit, y_batch)
-            output = SwinClassifier.predict(x_batch)
-            test_acc = torch.sum(output == y_batch)
-            print("Validation loss: ",loss)
-            print("Validation y_batch : ", y_batch)
-            print("Validation output : ", output)
+            loss = criterion(logit, y_batch).item()
+            #output = SwinClassifier.predict(x_batch)
+            #test_acc = torch.sum(output == y_batch)
             epoch_loss += loss
-            actual.append(y_batch.cpu().detach().numpy())
-            predicted.append(output.cpu().detach().numpy())
-    actual = np.concatenate(actual, axis=0)
-    predicted = np.concatenate(predicted, axis=0)
-    epoch_loss = epoch_loss / len(test_dataset)
-    epoch_accuracy = accuracy_score(actual,predicted)
-    epoch_precision = precision_score(actual,predicted,average="weighted")
-    epoch_f1 = f1_score(actual,predicted, average="weighted")
-    return epoch_loss, epoch_accuracy, epoch_precision, epoch_f1
-with open("epoch_results.txt", 'w') as f:
+            preds = torch.argmax(logit, dim=1)
+            predicted.extend(preds.cpu().numpy())
+            actual.extend(y_batch.cpu().numpy())
+            print("Validation loss : ",loss)
+            print("Validation y_batch :  ", y_batch)
+            print("Validation output : ",preds)
+            #actual.append(y_batch.cpu().detach().numpy())
+            #predicted.append(output.cpu().detach().numpy())
+            #actual = np.concatenate(actual, axis=0)
+            #predicted = np.concatenate(predicted, axis=0)
+    epoch_loss /= len(v_data_loader)
+    predicted = torch.tensor(predicted)
+    actual = torch.tensor(actual)
+    epoch_accuracy = multiclass_accuracy(predicted, actual, num_classes=10)
+    epoch_precision = multiclass_precision(predicted, actual, num_classes=10)
+    epoch_f1 = multiclass_f1_score(predicted, actual, num_classes=10)
+
+    #epoch_loss = epoch_loss / len(v_data_loader)
+    #epoch_accuracy = accuracy_score(actual,predicted)
+    #epoch_precision = precision_score(actual,predicted,average="weighted")
+    #epoch_f1 = f1_score(actual,predicted, average="weighted")
+    return epoch_loss, epoch_accuracy.item(), epoch_precision.item(), epoch_f1.item()
+with open("improved_swin_result.txt", 'w') as f:
     for i in range (epochs):
          print(f"Epoch {i} : \t Loss \t Accuracy  \t Precision  \t F1-score ")
          tr_loss, tr_acc, tr_prec, tr_f1score = training_func(train_dataloader)

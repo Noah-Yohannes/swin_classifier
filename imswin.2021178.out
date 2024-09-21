@@ -1,0 +1,5 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pillow in /home/kunet.ae/100053689/.local/lib/python3.9/site-packages (10.2.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torcheval in /home/kunet.ae/100053689/.local/lib/python3.9/site-packages (0.0.7)
+Requirement already satisfied: typing-extensions in /home/kunet.ae/100053689/.local/lib/python3.9/site-packages (from torcheval) (4.10.0)

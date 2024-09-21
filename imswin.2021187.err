@@ -1,0 +1,15 @@
+    Command utilities loaded:
+ 
+    ssumm:      Summarizes the status of Almesbar's partitions.
+    spend:      Displays the list of pending jobs sorted by priority.
+    sfairshare: Displays the list accounts sorted by fairshare value.
+    sbfill:     Displays backfill window.
+ 
+    Use the option -h or --help after a command for more details.
+    Example: sbfill -h
+    For more information visit
+https://wiki-researchcomputing.ku.ac.ae/display/RC/Command+utilities+on+Almesbar+HPC+cluster 
+  File "/home/kunet.ae/100053689/swin_classifier/Improved_Swin.py", line 173
+    epoch_loss /= len(t_data_loader)
+    ^
+SyntaxError: invalid syntax

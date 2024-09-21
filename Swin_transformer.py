@@ -1,5 +1,5 @@
-###         Swin Transformer based for Image Classification
-#Importing Libraris
+### Swin Transformer based for Image Classification
+# Importing Libraris
 
 import torch
 import torch.nn as nn
